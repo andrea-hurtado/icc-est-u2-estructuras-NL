@@ -2,7 +2,7 @@
 
 ## Autor
 - Nombre: Andrea Hurtado
-- Carrera/Curso: Estructura de Datos
+- Materia: Estructura de Datos
 
 
 ##  Nombre de la práctica - Fecha
