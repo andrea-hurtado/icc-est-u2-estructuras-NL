@@ -10,6 +10,7 @@ public class Node <T> {
         this.value = value;
         this.left = null;
         this.right = null;
+    
     }
 
     public T getValue(){

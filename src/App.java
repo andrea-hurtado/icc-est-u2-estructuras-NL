@@ -17,6 +17,8 @@ public class App {
         tree.posOrder();
         System.out.println("\nIn order ");
         tree.inOrder();
+        System.out.println("\nSize ");
+        System.out.println(tree.size());
     
     }
 }

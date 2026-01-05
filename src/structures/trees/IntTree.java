@@ -5,6 +5,7 @@ import structures.nodes.Node;
 public class IntTree {
 
     private Node<Integer> root;
+    private int Size;
 
     public IntTree(){
         this.root = null;
@@ -62,6 +63,19 @@ public class IntTree {
             inOrderRecursive(node.getLeft());
             System.out.print(node.getValue() + " ");
         }
+    }
+
+    public int size(){
+        return sizeRecursive(root);
+
+    }
+    
+    private int sizeRecursive(Node<Integer> node){
+        if (node == null) {
+            return 0;
+            
+        }
+        return 1 + sizeRecursive(node.getLeft()) + sizeRecursive(node.getRight());
     }
 
 }
