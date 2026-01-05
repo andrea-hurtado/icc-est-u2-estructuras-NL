@@ -13,8 +13,11 @@
 Descripción de que es lo que hizo o alcanzo desarrollar en la práctica.
 
 ## Evidencias
+
 ### Captura 
 
-- Archivo: ![alt text](assets/NL.png)
+- Archivo: 
+
+![alt text](assets/NL.png)
 
 
