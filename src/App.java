@@ -1,8 +1,32 @@
 
 import structures.trees.IntTree;
+import models.Person;
+import structures.trees.Tree;
 public class App {
     public static void main(String[] args) throws Exception {
-        runIntTree();
+        //runIntTree();
+        runTree();
+    }
+
+    private static void runTree(){
+        Tree<Person> tree = new Tree<Person>();
+        System.out.println("In Order");
+        tree.insert(new Person("Pablo", 21));
+        tree.insert(new Person("Maria", 23));
+        tree.insert(new Person("Ana", 25));
+        tree.insert(new Person("Pedro", 23));
+        tree.insert(new Person("Luis", 19));
+        tree.inOrder();
+        tree.searchByAge(23);
+        
+
+        Person findPerson = tree.searchByAge(23);
+        if (findPerson != null) {
+            System.out.println(findPerson);
+        } else{
+            System.out.println("No se encontró");
+        }
+        
     }
 
     private static void runIntTree(){

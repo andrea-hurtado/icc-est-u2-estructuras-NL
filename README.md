@@ -24,6 +24,14 @@ Se desarrolló una estructura de datos tipo árbol binario para almacenar valore
 
 ![alt text](assets/NLSize.png)
 
+- Archivo 3:
+Metodo search genérico: Busca un valor en el árbol usando la comparación de T, definida por compareTo. Compara el valor que quieres encontrar con el del nodo, si es igual, lo devuelve. Si es menor, baja por la izquierda. Si es mayor, baja por la derecha. Si llega a un nodo vacío, no existe.
+
+![alt text](assets/Search.png)
+
+- Archivo 4: 
+
+![alt text](assets/InOrder.png)
 
 
 

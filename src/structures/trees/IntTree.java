@@ -62,6 +62,8 @@ public class IntTree {
         if (node != null) {
             inOrderRecursive(node.getLeft());
             System.out.print(node.getValue() + " ");
+            inOrderRecursive(node.getRight());
+
         }
     }
 
