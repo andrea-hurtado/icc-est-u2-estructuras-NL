@@ -33,5 +33,16 @@ Metodo search genérico: Busca un valor en el árbol usando la comparación de T
 
 ![alt text](assets/InOrder.png)
 
+- Archivo 5:
+Utilizamos grafos para saber las conexiones de un nodo desde con una complejidad O(1) para que directamente busque la clave del nodo y diga cuales son las conexiones
+
+![alt text](assets/Graph.png)
+
+- Archivo 6: 
+
+![alt text](assets/Salida.png)
+
+
+
 
 
