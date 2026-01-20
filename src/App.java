@@ -3,6 +3,7 @@ import structures.graphs.Graph;
 import structures.nodes.Node;
 import structures.trees.IntTree;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 
 import models.Person;
@@ -11,7 +12,50 @@ public class App {
     public static void main(String[] args) throws Exception {
         //runIntTree();
         //runTree();
-        runGraph();
+        //runGraph();
+        runGraphRecorridos();
+
+    }
+
+    private static void runGraphRecorridos() {
+        Graph<Person> grafo = new Graph<>();
+        Person pC23 = new Person("Carlos", 23);
+        Person pL18 = new Person("Luis", 18);
+        Person pA23 = new Person("Andres", 23);
+        Person pAn30 = new Person("Ana", 30);
+        Person pJ25 = new Person("Juan", 25);
+        Person pAn20 = new Person("Ana", 20);
+        
+        //complementamos las relaciones
+        Node<Person> nC23 = new Node<>(pC23);
+        Node<Person> nL18 = new Node<>(pL18);
+        Node<Person> nA23 = new Node<>(pA23);
+        Node<Person> nAn30 = new Node<>(pAn30);
+        Node<Person> nJ25 = new Node<>(pJ25);
+        Node<Person> nAn20 = new Node<>(pAn20);
+        
+        //grafo.addEdge(new Node<>(pC23), new Node<>(pA30)); 
+
+        grafo.addEdge(nC23, nAn30); 
+        grafo.addConocido(nC23, nL18);
+        grafo.addConocido(nC23, nA23);
+        grafo.addConocido(nL18, nJ25);
+        grafo.addEdge(nL18, nA23);
+        grafo.addConocido(nAn30, nAn20);
+
+        //1 imprimimos todo el grafo
+        System.out.println("\nGrafo: ");
+        grafo.printGraph();
+
+        //2 imprimimos recorrido BFS    
+        System.out.println("\nRecorrido BFS: ");
+        grafo.bfs(nC23);
+        System.out.println();
+
+        //3 imprimimos recorrido DFS
+        System.out.println("\nRecorrido DFS: ");
+        grafo.dfs(nC23);
+        System.out.println();
 
     }
 
@@ -29,7 +73,7 @@ public class App {
        graph.addEdge(nC, nD);
        graph.printGraph();
 
-       Node<String>[] neighbors = graph.getNeighbors(nA);
+       List<Node<String>> neighbors = graph.getNeighbors(nA);
        System.out.print("Neighbors de A: ");
        for (Node<String> neighbor: neighbors) {
         System.out.println(neighbor + " ");

@@ -42,6 +42,10 @@ Utilizamos grafos para saber las conexiones de un nodo desde con una complejidad
 
 ![alt text](assets/Salida.png)
 
+- Archivo 7: Utilizamos un bfs busca por anchura,encontrar la ruta más corta entre dos nodos y luego va al siguiente nodo y un dfs recursivo parar recorrer un grafo yendo lo más profundo posible.
+
+![alt text](assets/BFS-DFS.png)
+
 
 
 
